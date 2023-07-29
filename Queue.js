@@ -1,4 +1,5 @@
-class Node{
+export{Qnode,queue}
+class Qnode{
   constructor(value){
     this.value = value;
     this.next = null;
@@ -27,7 +28,7 @@ class queue{
     console.log(values);
   }
   enqueue(value){
-    let added = new Node(value);
+    let added = new Qnode(value);
     if(this.isEmpty()){
       this.head = this.tail = added;
     }else{
